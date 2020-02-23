@@ -1,0 +1,10 @@
+digraph "TP1::Labyrinthe::ajoutePassage"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TP1::Labyrinthe::ajoutePassage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Méthode privée fournie dans le fichier Labyrinthe.cpp, elle ajoute un passage dans un labyrinthe."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="TP1::Piece::ajoutePorte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_p1_1_1_piece.html#ae60deab3477259bdc1902b14677f9726",tooltip="Ajouter une porte à la liste des portes qui partent de la pièce."];
+}

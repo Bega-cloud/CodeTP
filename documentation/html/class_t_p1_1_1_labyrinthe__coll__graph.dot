@@ -1,0 +1,22 @@
+digraph "TP1::Labyrinthe"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{TP1::Labyrinthe\n||+ Labyrinthe()\l+ Labyrinthe()\l+ ~Labyrinthe()\l+ operator=()\l+ chargeLabyrinthe()\l+ printPieces()\l+ ajoutePieceLabyrinthe()\l+ solutionner()\l+ trouveGagnant()\l+ getDepart()\l+ getArrivee()\l+ appartient()\l- ajoutePassage()\l- placeDepart()\l- placeArrivee()\l- trouvePiece()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Classe représentant un labyrinthe formé de plusieurs pièces dotées de portes de couleur."];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -depart\n-arrivee" ,arrowhead="odiamond",fontname="FreeSans"];
+  Node2 [label="{TP1::Piece\n|- parcourue\l- distanceDuDebut\l|+ Piece()\l+ Piece()\l+ Piece()\l+ ~Piece()\l+ operator=()\l+ getNom()\l+ setParcourue()\l+ setDistanceDuDebut()\l+ getParcourue()\l+ getPortes()\l+ getDistanceDuDebut()\l+ ajoutePorte()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_p1_1_1_piece.html",tooltip="Classe représentant une pièce dans un labyrinthe."];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" -portes" ,arrowhead="odiamond",fontname="FreeSans"];
+  Node3 [label="{std::list\< TP1::Porte \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +elements" ,arrowhead="odiamond",fontname="FreeSans"];
+  Node4 [label="{TP1::Porte\n|- color\l|+ Porte()\l+ Porte()\l+ Porte()\l+ ~Porte()\l+ operator=()\l+ operator==()\l+ getCouleur()\l+ getDestination()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_p1_1_1_porte.html",tooltip="Classe qui représente une porte d'une couleur donnée entre deux pièces."];
+  Node2 -> Node4 [color="grey25",fontsize="10",style="solid",label=" -destination" ,arrowhead="odiamond",fontname="FreeSans"];
+  Node5 -> Node2 [color="grey25",fontsize="10",style="solid",label=" -nom" ,arrowhead="odiamond",fontname="FreeSans"];
+  Node5 [label="{std::string\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class."];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="FreeSans"];
+  Node6 [label="{std::basic_string\<\l char \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class."];
+  Node7 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -dernier" ,arrowhead="odiamond",fontname="FreeSans"];
+  Node7 [label="{TP1::Labyrinthe::NoeudListe\lPieces\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_p1_1_1_labyrinthe_1_1_noeud_liste_pieces.html",tooltip="Noeud typique d'une liste chaînée circulaire."];
+  Node2 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +piece" ,arrowhead="odiamond",fontname="FreeSans"];
+  Node7 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +suivant" ,arrowhead="odiamond",fontname="FreeSans"];
+}
